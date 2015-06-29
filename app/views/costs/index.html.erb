@@ -1,0 +1,21 @@
+<h1>Listing Costs</h1>
+
+<%= link_to 'New Cost', new_user_cost_path(@user) %>
+
+<table class="table table-condensed">
+	<tr>
+		<th>Item</th>
+		<th>Cost</th>
+		<th colspan="3"></th>
+	</tr>
+
+	<% @costs.each do |cost| %>
+		<tr>
+			<td><%= cost.item %></td>
+			<td><%= cost.cost %></td>
+			<td><%= link_to 'Show', user_cost_path(@user, cost) %></td>
+			<td><%= link_to 'Edit', edit_user_cost_path(@user, cost) %></td>
+			<td><%= link_to 'Destroy', user_cost_path(@user, cost), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+	<% end %>
+</table>

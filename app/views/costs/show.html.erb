@@ -1,0 +1,12 @@
+<p>
+	<strong>Item:</strong>
+	<%= @cost.item %>
+</p>
+
+<p>
+	<strong>Cost:</strong>
+	<%= @cost.cost %>
+</p>
+
+<%= link_to 'Edit', edit_user_cost_path(@user, @cost) %> |
+<%= link_to 'Back', user_costs_path(@user) %>
